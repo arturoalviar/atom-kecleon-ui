@@ -1,0 +1,87 @@
+
+// Buttons
+// -------------------
+
+// Overrides: atom/atom/static/buttons.less
+
+.btn-background (@color, @hover-color, @selected-color, @text-color) {
+  color: @text-color;
+  background: @color;
+
+  &:active, &:focus:active {
+    outline: none;
+  }
+
+  &:focus {
+    color: @text-color;
+  }
+
+  &:hover {
+    color: @text-color;
+    background: @color;
+  }
+
+  &:active, &:focus:active {
+    outline: none;
+  }
+
+  &.selected,
+  &.selected:hover {
+    color: @text-color;
+    background-color: @selected-color;
+  }
+}
+
+.btn-variant (@color, @text-color: @accent-text-color) {
+  @bg: @color;
+  @hover: @color;
+  @selected: darken(@color, 10%);
+  .btn-background(@bg, @hover, @selected, @text-color);
+}
+
+.btn {
+  color: @base-background-color;
+  background: @text-color;
+  outline: none;
+  transition: box-shadow .2s;
+  will-change: box-shadow;
+
+  &:active,
+  &:focus,
+  &:focus:active {
+    outline: none;
+  }
+
+  .btn-group & {
+    box-shadow: none;
+  }
+}
+
+.btn-group {
+  align-items: center;
+}
+
+.btn.btn-primary {
+  .btn-variant(@base-color);
+}
+
+.btn.btn-info {
+  .btn-variant(@text-color-info);
+}
+
+.btn.btn-success {
+  .btn-variant(@text-color-success);
+}
+
+.btn.btn-warning {
+  .btn-variant(@text-color-warning, #000000);
+}
+
+.btn.btn-error {
+  .btn-variant(@text-color-error);
+}
+
+.caret {
+  border-top: 5px solid #fff;
+  margin-top: -1px;
+}

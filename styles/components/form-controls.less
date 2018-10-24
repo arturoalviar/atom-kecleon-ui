@@ -1,0 +1,25 @@
+.input-checkbox {
+  &:active {
+    background-color: @text-color;
+  }
+
+  &:checked {
+    background-color: @text-color;
+  }
+}
+
+.input-radio {
+  &:active,
+  &:checked,
+  &:focus {
+    background-color: @text-color;
+  }
+}
+
+.input-toggle:checked {
+  background-color: @text-color;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: @text-color;
+}

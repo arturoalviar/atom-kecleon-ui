@@ -1,0 +1,27 @@
+.alert, .settings-view .alert {
+  &-info, &-warning,
+  &-error, &-success,
+  &-danger {
+    background-color: fade(@text-color, 2%);
+  }
+
+  &-info {
+    border-color: @text-color-info;
+    color: @text-color-info;
+  }
+
+  &-warning {
+    border-color: @text-color-warning;
+    color: @text-color-warning;
+  }
+
+  &-error, &-danger {
+    border-color: @text-color-error;
+    color: @text-color-error;
+  }
+
+  &-success {
+    border-color: @text-color-success;
+    color: @text-color-success;
+  }
+}
