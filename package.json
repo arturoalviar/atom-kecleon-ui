@@ -10,7 +10,7 @@
     "adapt to syntax",
     "dynamic"
   ],
-  "repository": "https://github.com/arturoalviar/atom-theme-kecleon-ui",
+  "repository": "https://github.com/arturoalviar/atom-kecleon-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
